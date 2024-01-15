@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/logo__1_-removebg-preview.png" type="image/x-icon">
+
+    <title>Julia Cakes</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- custom javascript link  -->
+    <script src="js/script.js" defer></script>
+
+</head>
+
+<!-- Adicione esta div no seu HTML onde você deseja exibir os detalhes do carrinho -->
+<div id="cartModal" class="cartModal"></div>
+<body>
+
+    
+  
+
+<!-- header section starts  -->
+
+<header class="header">
+
+    <a href="#" class="logo">  <img src="/images/logo (1).png" width="100px" height="100px"   alt=""> </a>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#about">Sobre</a>
+        <a href="#shop">Sobremesas</a>
+        <a href="#gallery">Bolos</a>
+        <a href="#message">Contatos</a>
+        <a href="#blogs">Posts</a>
+    </nav>
+
+    <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <div id="search-btn" class="fas fa-search"></div>
+        <a href="#" id="cart" class="fas fa-shopping-cart">
+            <span class="badge" id="cartCount">0</span>
+        </a>
+    </div>
+
+    <form action="" class="search-form">
+        <input type="search" name="" placeholder="Pesquisar..." id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="slide active" style="background:url(images/christmas-cookies.jpg) no-repeat; background-size: cover; background-position: center;">
+        <div class="content">
+            <span>Feliz Natal</span>
+            <h3>ATÉ 60% DE DESCONTO</h3>
+            <a href="#shop" class="btn">COMPRE JÁ</a>
+        </div>
+    </div>
+
+    <div class="slide" style="background:url(images/home-bg-2.png) no-repeat; background-size: cover; background-position: center;">
+        <div class="content">
+            <span>ho-ho-ho</span>
+            <h3>FELIZ FERIADO</h3>
+            <a href="https://api.whatsapp.com/send/?phone=5511966389440&text&type=phone_number&app_absent=0" class="btn">COMPRE JÁ</a>
+        </div>
+    </div>
+
+    <div id="next-slide" onclick="next()" class="fas fa-angle-right"></div>
+    <div id="prev-slide" onclick="prev()" class="fas fa-angle-left"></div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- category section starts  -->
+
+<section class="category">
+
+    <div class="box-container">
+
+        <a href="#" class="box">
+            <img src="images/pao-de-gengibre.png" alt="">
+            <h3>Biscoitos Decorados</h3>
+        </a>
+
+        <a href="#" class="box">
+            <img src="images/bolo.png" alt="">
+            <h3>Bolos Decorados</h3>
+        </a>
+
+        <a href="#" class="box">
+            <img src="images/torta-de-berry.png" alt="">
+            <h3>Tortas</h3>
+        </a>
+
+        <a href="#" class="box">
+            <img src="images/cone.png" alt="">
+            <h3>Cones Recheados</h3>
+        </a>
+
+        <a href="#" class="box">
+            <img src="images/pao.png" alt="">
+            <h3>Pão de Mel Recheados</h3>
+        </a>
+
+        <a href="#" class="box">
+            <img src="images/brigadeiro (2).png" alt="">
+            <h3>Docinhos Decorados</h3>
+        </a>
+
+    </div>
+
+</section>
+
+<!-- category section ends -->
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+    <div class="image">
+        <img src="images/about-img.png" alt="">
+    </div>
+
+    <div class="content">
+        <div class="box">
+            <h3>Promoção de Natal está ON!</h3>
+            <p>Desfrute dos sabores irresistíveis da temporada conosco! Nossa confeitaria está com a promoção ON, válida para todos os pedidos até o final de dezembro. Adquira já os seus bolos, tortas, brownies, cones e muito mais. Transforme seus momentos especiais em verdadeiras celebrações de sabor conosco. Faça seu pedido agora e aproveite!</p>
+            <a href="https://api.whatsapp.com/send/?phone=5511966389440&text&type=phone_number&app_absent=0" class="btn">ADQUIRA JÁ</a>
+        </div>
+        <div class="icons-container">
+            <div class="icons">
+                <i class="fa-solid fa-cake-candles" style="color: #fe0101;"></i>
+                <p>Bolos Decorados</p>
+            </div>
+            <div class="icons">
+                <i class="fas fa-cookie"></i>
+                <p>Biscoitos Natalinos</p>
+            </div>
+            <div class="icons">
+                <i class="fa-solid fa-chart-pie" style="color: #ff0000;"></i>
+                <p>Tortas</p>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- about section ends -->
+
+<!-- shop section starts  -->
+
+<section class="shop" id="shop">
+
+    <h1 class="heading">Nossas Sobremesas</h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <div class="image">
+                <img src="images/limao1.jpg" alt="">
+                <div class="icons">
+                    
+                </div>
+            </div>
+            <div class="content">
+                <h3>Torta de Limão</h3>
+                <div class="price"> $60,00 <span>$70,00</span> </div>
+                <a href="#" class="btn" id="torta-limao">adicionar ao carrinho</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/torta.png" alt="">
+                <div class="icons">
+                   
+                </div>
+            </div>
+            <div class="content">
+                <h3>Cheesecake Frutas Vermelhas</h3>
+                <div class="price"> $65,00 <span>$75,00</span> </div>
+                <a href="#" class="btn"  id="cheesecake-frutas-vermelhas">adicionar ao carrinho</a>
+            </div>
+        </div>
+         <div class="box">
+            <div class="image">
+                <img src="images/cheesecake-de-morango-facil.jpeg" alt="">
+                <div class="icons">
+                   
+                </div>
+            </div>
+            <div class="content">
+                <h3>Cheesecake Morango</h3>
+                <div class="price"> $65,00 <span>$75,00</span> </div>
+                <a href="#" class="btn" id="cheesecake-morango">adicionar ao carrinho</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/tortaholandesa.jpeg"  alt="">
+                <div class="icons">
+                    
+                </div>
+            </div>
+            <div class="content">
+                <h3>Torta Holandesa</h3>
+                <div class="price"> $60,00 <span>$70,00</span> </div>
+                <a href="#" class="btn" id="torta-holandesa">adicionar ao carrinho</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/sobreeisso.png" alt="">
+                <div class="icons">
+                    
+                </div>
+            </div>
+            <div class="content">
+                <h3>Surpresa de Morango</h3>
+                <div class="price"> $90,00 <span>$100,00</span> </div>
+                <a href="#" class="btn" id="surpresa-morango">adicionar ao carrinho</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/chocola1.jpg" alt="">
+                <div class="icons">
+                  
+                </div>
+            </div>
+            <div class="content">
+                <h3>Surpresa de Uva</h3>
+                <div class="price"> $80,00 <span>$90,00</span> </div>
+                <a href="#" class="btn" id="surpresa-uva">adicionar ao carrinho</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/guirlanda-de-brownie.webp" alt="">
+                <div class="icons">
+                    
+                </div>
+            </div>
+            <div class="content">
+                <h3>Guirlanda de Brownie</h3>
+                <div class="price"> $100,00 <span>$120,00</span> </div>
+                <a href="#" class="btn" id="guirlanda">adicionar ao carrinho</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/paodemel-1.jpeg" alt="">
+                <div class="icons">
+                    
+                </div>
+            </div>
+            <div class="content">
+                <h3>Pão de Mel recheado cx/2uni</h3>
+                <div class="price"> $14,00 <span>$16,00</span> </div>
+                <a href="#" class="btn" id="paodemel">adicionar ao carrinho</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- shop section ends -->
+
+<!-- banner section starts  -->
+<!--SÓ -->
+<section class="banner">
+
+    <div class="content">
+        <span>Oferta Especial</span>
+        <h3>Até 50% De Desconto</h3>
+        <p>Explore uma seleção imperdível de ofertas com descontos incríveis, chegando até 50%. </p>
+        <a href="https://api.whatsapp.com/send/?phone=5511966389440&text&type=phone_number&app_absent=0" class="btn">Compre já</a>
+    </div>
+
+</section>
+
+<!-- banner section ends -->
+<section class="shop" id="shop">
+
+    <h1 class="heading">Nossos Bolos</h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <div class="image">
+                <img src="images/bolo1.png" alt="">
+                <div class="icons">
+                 
+                </div>
+            </div>
+            <div class="content">
+                <h3>Bolo Chocolate c/Brigadeiro</h3>
+                <div class="price"> $90,00 o kilo <span>$125,00</span> </div>
+                <a href="#" class="btn" id="BoloChocolateBrigadeiro">adicionar ao carrinho</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/bolo2.jpg" alt="">
+                <div class="icons">
+                    
+                </div>
+            </div>
+            <div class="content">
+                <h3>Bolo de Abacaxi com Coco</h3>
+                <div class="price"> $90,00 o kilo <span>$125,00</span> </div>
+                <a href="#" class="btn" id="BoloAbacaxi">adicionar ao carrinho</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/bolo3.png" alt="">
+                <div class="icons">
+                 
+                </div>
+            </div>
+            <div class="content">
+                <h3>Bolo de Morango</h3>
+                <div class="price"> $90,00 o kilo <span>$125,00</span> </div>
+                <a href="#" class="btn" id="BoloMorango">adicionar ao carrinho</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/bolo4.png" alt="">
+                <div class="icons">
+                    
+                </div>
+            </div>
+            <div class="content">
+                <h3>Bolo de Coco</h3>
+                <div class="price"> $90,00 o kilo <span>$125,00</span> </div>
+                <a href="#" class="btn" id="BoloCoco">adicionar ao carrinho</a>
+            </div>
+        </div>
+
+    
+
+    </div>
+
+</section>
+
+<!-- shop section ends -->
+
+
+
+<!-- message sections starts  -->
+
+<section class="message" id="message">
+
+    <form action="">
+        <h3>Entre em contato</h3>
+        <input type="text" placeholder="Nome" class="box">
+        <input type="email" placeholder="Email" class="box">
+        <input type="number" placeholder="Telefone" class="box">
+        <textarea name="" placeholder="Mensagem" class="box" id="" cols="30" rows="10"></textarea>
+        <input type="submit" value="Enviar Mensagem" class="btn">
+    </form>
+
+</section>
+
+<!-- message section ends -->
+
+<!-- blogs section starts  -->
+
+<section class="blogs" id="blogs">
+
+    <h1 class="heading">Nossos Posts</h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <div class="image">
+                <img src="images/natal1.jpg" alt="">
+            </div>
+            <div class="content">
+                <div class="date">
+                    <h3>04</h3>
+                    <span>dez</span>
+                </div>
+                <a href="#" class="user"> <i class="fas fa-user"></i> by Julia Cakes </a>
+                <a href="#" class="title">Biscoitos que encantam os sentidos! 🌟</a>
+                <p>Saboreie a temporada com nossos biscoitos natalinos de ninho, baunilha e chocolate!</p>
+                <a href="https://www.instagram.com/juliadarisconfeitaria/" class="btn">Ver post</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/natal2.jpg" alt="">
+            </div>
+            <div class="content">
+                <div class="date">
+                    <h3>03</h3>
+                    <span>dez</span>
+                </div>
+                <a href="#" class="user"> <i class="fas fa-user"></i> by Julia Cakes </a>
+                <a href="#" class="title"> Celebre a magia do Natal com nossos irresistíveis biscoitos artesanais. 🎄 </a>
+                <p>Delicie-se com os sabores de ninho, baunilha e chocolate!</p>
+                <a href="https://www.instagram.com/juliadarisconfeitaria/" class="btn">Ver post</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/feito3.jpg" alt="">
+            </div>
+            <div class="content">
+                <div class="date">
+                    <h3>16</h3>
+                    <span>nov</span>
+                </div>
+                <a href="#" class="user"> <i class="fas fa-user"></i> by Julia Cakes </a>
+                <a href="#" class="title"> Brownie pizza recheado de Brigadeiro!</a>
+                <p>A tentação em forma de brownie pizza recheado de Brigadeiro!</p>
+                <a href="https://www.instagram.com/juliadarisconfeitaria/" class="btn">Ver post</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- blogs section ends -->
+
+<!-- services section starts -->
+
+<section class="service">
+
+    <div class="box">
+        <img src="images/iFood-Logo-site.png" alt="">
+        <h3>Estamos no Ifood</h3>
+        <p>Acompanhe-nos no iFood e esteja sempre conectado às nossas novidades e deliciosas opções!</p>
+    </div>
+
+    <div class="box">
+        <img src="images/icon-2.png" alt="">
+        <h3>Pagamento Seguro</h3>
+        <p>Garantimos pagamentos 100% seguros, priorizando a sua tranquilidade e segurança!</p>
+    </div>
+
+    <div class="box">
+        <img src="images/icon-3.png" alt="">
+        <h3>24hrs Suporte</h3>
+        <p>Estamos disponíveis 24 horas por dia, 7 dias por semana, para ajudar você a qualquer momento!</p>
+    </div>
+
+</section>
+
+<!-- services section ends -->
+
+<!-- footer section starts -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>Links Rápidos</h3>
+            <a class="link" href="#home"> <i class="fas fa-angle-right"></i> Home</a>
+            <a class="link" href="#about"> <i class="fas fa-angle-right"></i> Sobre</a>
+            <a class="link" href="#shop"> <i class="fas fa-angle-right"></i> Sobremesas</a>
+            <a class="link" href="#gallery"> <i class="fas fa-angle-right"></i> Bolos</a>
+            <a class="link" href="#message"> <i class="fas fa-angle-right"></i> Contatos</a>
+            <a class="link" href="#blogs"> <i class="fas fa-angle-right"></i> Posts</a>
+        </div>
+
+        <div class="box">
+            <h3>Links Extras</h3>
+            <a class="link" href="#"> <i class="fas fa-angle-right"></i> meu pedido </a>
+            <a class="link" href="#"> <i class="fas fa-angle-right"></i> política privada</a>
+            <a class="link" href="#"> <i class="fas fa-angle-right"></i> termos de uso </a>
+        </div>
+
+        <div class="box">
+            <h3>Informações De Contato</h3>
+            <a class="link" href="#"> <i class="fas fa-phone"></i> +55 (11) 96638-9440 </a>
+            <a class="link" href="#"> <i class="fas fa-envelope"></i> juliadaris07@gmail.com </a>
+            <a class="link" href="#"> <i class="fas fa-map"></i> SP - Vila Antonieta</a>
+            <div class="share">
+                <a href="https://www.linkedin.com/in/julia-daris-a264a7252/" class="fab fa-linkedin"></a>
+                <a href="https://www.instagram.com/juliadarisconfeitaria/" class="fab fa-instagram"></a>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="credit"> criado por <span><a href="https://www.linkedin.com/in/miguelgiannotti/">©Miguel Giannotti</a></span> | Todos os direitos reservados! </div>
+
+</section>
+
+<!-- footer section ends -->
+<script src="https://kit.fontawesome.com/c654e573f2.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
